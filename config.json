@@ -6,7 +6,7 @@
                 "browser": "Chrome",
                 "__valoresValidos": "local, remote",
                 "execution": "local",
-                "headless": false,
+                "headless": true,
                 "use_web_driver_manager": true,
                 "selenium_hub": "http://xxx/wd/hub",
                 "default_time_out_in_seconds": "30",
