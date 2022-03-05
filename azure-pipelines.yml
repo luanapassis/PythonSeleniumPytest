@@ -52,10 +52,9 @@ steps:
 - task: ArchiveFiles@2
   condition: always()
   inputs:
-    rootFolderOrFile: '**/allure-results'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: 'allure-results.zip'
+    archiveFile: '/allure-results/allure-results.zip'
     replaceExistingArchive: true
 
 
