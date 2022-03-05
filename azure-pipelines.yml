@@ -55,7 +55,7 @@ steps:
     rootFolderOrFile: '**/allure-results'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/allure-results.zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/allure-results/aresults.zip'
     replaceExistingArchive: true
 
 
