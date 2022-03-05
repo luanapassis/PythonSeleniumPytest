@@ -77,8 +77,9 @@ steps:
     password: 'luanapassis'
     rootDirectory: 'allure-results'
     filePatterns: '**'
-    remoteDirectory: '/upload/$(Build.BuildId)/'
+    remoteDirectory: '/htdocs/report'
     clean: false
     cleanContents: false
     preservePaths: false
     trustSSL: false
+
