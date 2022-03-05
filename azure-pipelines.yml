@@ -55,7 +55,7 @@ steps:
     rootFolderOrFile: '**/allure-results'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '**/aresult.zip'
+    archiveFile: 'allure-results/aresult.zip'
     replaceExistingArchive: true
 
 
