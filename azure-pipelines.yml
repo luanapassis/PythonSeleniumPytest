@@ -72,7 +72,7 @@ steps:
   condition: always()
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftpupload.net'
+    serverUrl: 'ftp://ftp.byethost7.com'
     username: 'b7_31212557'
     password: 'luanapassis'
     rootDirectory: 'allure-results'
