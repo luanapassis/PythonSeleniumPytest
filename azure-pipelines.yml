@@ -52,7 +52,7 @@ steps:
 - task: ArchiveFiles@2
   condition: always()
   inputs:
-    rootFolderOrFile: '**/allure-results'
+    rootFolderOrFile: '**/'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: 'allure-results/aresult.zip'
@@ -60,6 +60,7 @@ steps:
     verbose: true
 
 - task: ArchiveFiles@2
+  condition: always()
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
     includeRootFolder: false
