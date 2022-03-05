@@ -48,15 +48,14 @@ steps:
     pytest -s --alluredir=./allure-results
   displayName: 'pytest'
   
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '/allure-results'
+    rootFolderOrFile: '$(Build.BinariesDirectory)/allure-results'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-
-
 
 
 
