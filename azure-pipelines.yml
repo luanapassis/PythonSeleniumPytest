@@ -50,12 +50,11 @@ steps:
   
 
 - task: ArchiveFiles@2
-  condition: always()
   inputs:
-    rootFolderOrFile: '$(Agent.BuildDirectory)/allure-results'
+    rootFolderOrFile: '$(Build.BinariesDirectory)/allure-results'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: './$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
 
