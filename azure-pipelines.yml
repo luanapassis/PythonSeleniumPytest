@@ -60,8 +60,7 @@ steps:
 
 
 - task: AllureGenerate@1
-  condition: always()
   inputs:
     resultsDir: 'allure-results'
-    targetDir: 'allure-report/$(Build.BuildNumber)'
+    targetDir: 'allure-report'
 
