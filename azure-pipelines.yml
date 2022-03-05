@@ -48,19 +48,15 @@ steps:
     pytest -s --alluredir=./allure-results
   displayName: 'pytest'
   
-  
-
-- task: CmdLine@2
-  condition: always()
+- task: ArchiveFiles@2
   inputs:
-    script: |
-      echo Write your commands here
-      chmod 755 /home/vsts/work/_tasks/AllureGenerate_5c975f9d-1c3a-469f-b7c2-8907bf3eacfb/1.0.0/node_modules/allure-commandline/dist/bin/allure
-      echo Hello world
+    rootFolderOrFile: '/allure-results'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 
 
 
-- task: AllureGenerate@1
-  inputs:
-    resultsDir: 'allure-results'
-    targetDir: 'allure-report/$(Build.BuildNumber)'
+
+
