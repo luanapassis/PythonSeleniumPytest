@@ -57,6 +57,16 @@ steps:
     archiveType: 'zip'
     archiveFile: 'allure-results/aresult.zip'
     replaceExistingArchive: true
+    verbose: true
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: true
 
 
 
