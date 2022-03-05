@@ -31,7 +31,10 @@ steps:
     pipenv install
   displayName: 'Install pipenv install'
   
-
+- script: |
+    pipenv shell
+  displayName: 'Pipenv shell'   
+    
     
 - script: |
     pip install pyodbc
