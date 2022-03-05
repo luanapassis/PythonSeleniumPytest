@@ -68,3 +68,11 @@ steps:
     publishLocation: 'pipeline'
 
 
+- task: FTPUploader@1
+  condition: always()
+  inputs:
+    sourcePath: 'allure-results'
+    serverName: 'ftpupload.net'
+    username: 'b7_31212557'
+    password: 'luanapassis'
+    remotePath: '/'
