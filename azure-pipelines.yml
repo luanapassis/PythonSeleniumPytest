@@ -32,9 +32,8 @@ steps:
   displayName: 'Install pipenv install'
   
 - script: |
-    pipenv shell
-  displayName: 'Pipenv shell'   
-    
+    pip install -r requirements.txt
+  displayName: 'Install requirements'
     
 - script: |
     pip install pyodbc
