@@ -59,15 +59,12 @@ steps:
     replaceExistingArchive: true
     verbose: true
 
-- task: ArchiveFiles@2
+
+- task: PublishPipelineArtifact@1
   condition: always()
   inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)/allure-results'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-    verbose: true
-
+    targetPath: 'allure-results'
+    artifact: 'aresult.zip'
+    publishLocation: 'pipeline'
 
 
